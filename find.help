@@ -1,0 +1,36 @@
+Использование: find [-H] [-L] [-P] [-Oуровень] [-D help|tree|search|stat|rates|opt|exec|time] [путь…] [выражение]
+
+путём по умолчанию является текущий подкаталог; выражение по умолчанию: -print
+выражение может состоять из операторов, параметров, тестов и действий:
+
+операторы (в порядке уменьшения приоритета; -and берется по умолчанию, если не дано других):
+      ( EXPR ) ! EXPR -not EXPR EXPR1 -a EXPR2 EXPR1 -and EXPR2
+      EXPR1 -o EXPR2 EXPR1 -or EXPR2 EXPR1 , EXPR2
+
+позиционные параметры (всегда): -daystart -follow -regextype
+
+обычные параметры (всегда указываются раньше остальных выражений):
+      -depth --help -maxdepth LEVELS -mindepth LEVELS -mount -noleaf
+      --version -xdev -ignore_readdir_race -noignore_readdir_race
+
+tests (N могут быть +N или -N или N): -amin N -anewer ФАЙЛ -atime N -cmin N
+      -cnewer ФАЙЛ -ctime N -empty -false -fstype ТИП -gid N -group ИМЯ
+      -ilname ШАБЛОН -iname ШАБЛОН -inum N -ipath ШАБЛОН -iregex ШАБЛОН
+      -links N -lname ШАБЛОН -mmin N -mtime N -name ШАБЛОН -newer ФАЙЛ
+      -nouser -nogroup -path ШАБЛОН -perm [-/]РЕЖИМ -regex ШАБЛОН
+      -readable -writable -executable
+      -wholename ШАБЛОН -size N[bcwkMG] -true -type [bcdpflsD] -uid N
+      -used N -user ИМЯ -xtype [bcdpfls]
+      -context КОНТЕКСТ
+
+
+действия: -delete -print0 -printf ФОРМАТ -fprintf ФОРМАТ_ФАЙЛА -print 
+      -fprint0 ФАЙЛ -fprint ФАЙЛ -ls -fls ФАЙЛ -prune -quit
+      -exec КОМАНДА ; -exec КОМАНДА {} + -ok КОМАНДА ;
+      -execdir КОМАНДА ; -execdir КОМАНДА {} + -okdir КОМАНДА ;
+
+Please see also the documentation at http://www.gnu.org/software/findutils/.
+You can report (and track progress on fixing) bugs in the "find"
+program via the GNU findutils bug-reporting page at
+https://savannah.gnu.org/bugs/?group=findutils or, if
+you have no web access, by sending email to <bug-findutils@gnu.org>.

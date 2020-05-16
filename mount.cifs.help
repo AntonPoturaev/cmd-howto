@@ -1,0 +1,30 @@
+
+Usage:  mount.cifs <remotetarget> <dir> -o <options>
+
+Mount the remote target, specified as a UNC name, to a local directory.
+
+Options:
+	user=<arg>
+	pass=<arg>
+	dom=<arg>
+
+Less commonly used options:
+	credentials=<filename>,guest,perm,noperm,setuids,nosetuids,rw,ro,
+	sep=<char>,iocharset=<codepage>,suid,nosuid,exec,noexec,serverino,
+	mapchars,nomapchars,nolock,servernetbiosname=<SRV_RFC1001NAME>
+	directio,nounix,cifsacl,sec=<authentication mechanism>,sign,fsc
+
+Options not needed for servers supporting CIFS Unix extensions
+	(e.g. unneeded for mounts to most Samba versions):
+	uid=<uid>,gid=<gid>,dir_mode=<mode>,file_mode=<mode>,sfu
+
+Rarely used options:
+	port=<tcpport>,rsize=<size>,wsize=<size>,unc=<unc_name>,ip=<ip_address>,
+	dev,nodev,nouser_xattr,netbiosname=<OUR_RFC1001NAME>,hard,soft,intr,
+	nointr,ignorecase,noposixpaths,noacl,prefixpath=<path>,nobrl
+
+Options are described in more detail in the manual page
+	man 8 mount.cifs
+
+To display the version number of the mount helper:
+	mount.cifs -V
