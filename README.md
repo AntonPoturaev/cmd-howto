@@ -1,2 +1,2 @@
-# cmd-howto
-### @pakage cmd-howto > *@brief* _A_storage _for_ some ( __help__or__man__) pages of _OS' (win/unix/etc...)_ commands.
+# @pakage *cmd-howto*
+> __@brief__ **A storage** for some ( ***help*** or ***man*** ) __pages__ of _OS' (win/unix/etc...)_ __commands.__
